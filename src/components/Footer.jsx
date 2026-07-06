@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Instagram, Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../public/campuskartlogo.PNG';
 
 const Footer = () => {
     return (
@@ -12,7 +11,11 @@ const Footer = () => {
                     {/* Brand column */}
                     <div className="flex flex-col">
                         <Link to="/" className="flex items-center gap-2 mb-4 group">
-                            <img src={logo} alt="CampusKart Logo" className="h-9 object-contain group-hover:scale-105 transition-transform rounded-lg" />
+                        <img 
+  src="/campuskartlogo.png" 
+  alt="CampusKart Logo" 
+  className="h-9 object-contain group-hover:scale-105 transition-transform rounded-lg" 
+/>
                             <span className="font-bold text-lg tracking-tight text-[var(--color-text)] font-outfit">
                                 Campus<span className="text-[var(--color-accent)]">Kart</span>
                             </span>
