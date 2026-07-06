@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ShoppingCart, User, Search, Menu, X, Heart, LogOut, ChevronDown, Settings } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import logo from '../public/campuskartlogo.PNG';
 
 const DEFAULT_AVATAR = 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&q=80&w=200';
 
@@ -34,11 +33,11 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-                        <img
-                            src={logo}
-                            alt="CampusKart Logo"
-                            className="h-9 object-contain transition-transform duration-300 group-hover:scale-105 rounded-lg"
-                        />
+                    <img
+  src="/campuskartlogo.png"
+  alt="CampusKart Logo"
+  className="h-9 object-contain transition-transform duration-300 group-hover:scale-105 rounded-lg"
+/>
                         <span className="font-bold text-xl tracking-tight text-[var(--color-text)] hidden md:block font-outfit">
                             Campus<span className="text-[var(--color-accent)]">Kart</span>
                         </span>
