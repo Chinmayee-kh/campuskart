@@ -33,7 +33,7 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-                    <img
+                       <img
   src="/campuskartlogo.png"
   alt="CampusKart Logo"
   className="h-9 object-contain transition-transform duration-300 group-hover:scale-105 rounded-lg"
@@ -50,7 +50,7 @@ const Navbar = () => {
                                 key={to}
                                 to={to}
                                 className={`relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 group
-                                    ${isActive(to)
+                                    ₹{isActive(to)
                                         ? 'text-[var(--color-accent)] bg-blue-50'
                                         : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface2)]'
                                     }`}
@@ -97,7 +97,7 @@ const Navbar = () => {
                                     <div className="w-7 h-7 rounded-full bg-[var(--color-surface2)] overflow-hidden border border-[var(--color-border)] flex items-center justify-center">
                                         <img src={user?.avatar || DEFAULT_AVATAR} alt={user?.name || "User"} className="w-full h-full object-cover" />
                                     </div>
-                                    <ChevronDown size={13} className={`text-[var(--color-text-muted)] transition-transform duration-200 ${showDropdown ? 'rotate-180' : ''}`} />
+                                    <ChevronDown size={13} className={`text-[var(--color-text-muted)] transition-transform duration-200 ₹{showDropdown ? 'rotate-180' : ''}`} />
                                 </button>
 
                                 {showDropdown && (
@@ -167,7 +167,7 @@ const Navbar = () => {
                                 to={to}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors
-                                    ${isActive(to) ? 'bg-blue-50 text-[var(--color-accent)]' : 'text-[var(--color-text-muted)] hover:bg-[var(--color-surface2)] hover:text-[var(--color-text)]'}`}
+                                    ₹{isActive(to) ? 'bg-blue-50 text-[var(--color-accent)]' : 'text-[var(--color-text-muted)] hover:bg-[var(--color-surface2)] hover:text-[var(--color-text)]'}`}
                             >
                                 {label}
                             </Link>

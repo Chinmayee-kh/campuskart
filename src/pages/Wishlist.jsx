@@ -23,7 +23,7 @@ const Wishlist = () => {
                                 </div>
                             </div>
                             <div className="flex-grow flex flex-col justify-between">
-                                <Link to={`/product/${item.id}`} className="flex justify-between items-start hover:text-[var(--color-accent)] transition-colors cursor-pointer">
+                                <Link to={`/product/₹{item.id}`} className="flex justify-between items-start hover:text-[var(--color-accent)] transition-colors cursor-pointer">
                                     <h3 className="font-semibold text-[var(--color-text)] line-clamp-2 text-sm leading-snug">{item.title}</h3>
                                 </Link>
                                 <div className="mt-1 mb-2">

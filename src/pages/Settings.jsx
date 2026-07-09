@@ -52,7 +52,7 @@ const Settings = () => {
                         <button 
                             onClick={() => setIsDark(false)}
                             className={`flex-1 py-3 px-4 rounded-xl border font-bold text-sm transition-all flex items-center justify-center gap-2
-                                ${!isDark 
+                                ₹{!isDark 
                                     ? 'bg-[var(--color-accent)] text-white border-transparent shadow-btn' 
                                     : 'bg-[var(--color-surface2)] text-[var(--color-text)] border-[var(--color-border)] hover:border-[var(--color-text-muted)]'}`}
                         >
@@ -61,7 +61,7 @@ const Settings = () => {
                         <button 
                             onClick={() => setIsDark(true)}
                             className={`flex-1 py-3 px-4 rounded-xl border font-bold text-sm transition-all flex items-center justify-center gap-2
-                                ${isDark 
+                                ₹{isDark 
                                     ? 'bg-[var(--color-accent)] text-white border-transparent shadow-btn' 
                                     : 'bg-[var(--color-surface2)] text-[var(--color-text)] border-[var(--color-border)] hover:border-[var(--color-text-muted)]'}`}
                         >

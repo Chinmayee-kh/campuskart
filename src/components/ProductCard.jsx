@@ -48,11 +48,11 @@ const ProductCard = ({ product }) => {
 
                 {/* Discount badge */}
                 <div className={`absolute top-3 left-3 px-2.5 py-1 text-xs font-bold rounded-full text-white
-                    ${product.type === 'Rent'
+                    ₹{product.type === 'Rent'
                         ? 'bg-[var(--color-accent)]'
                         : 'bg-[var(--color-accent-2)]'
                     }`}>
-                    {product.type === 'Rent' ? 'RENT' : `${discountPct}% OFF`}
+                    {product.type === 'Rent' ? 'RENT' : `₹{discountPct}% OFF`}
                 </div>
 
                 <button
@@ -69,7 +69,7 @@ const ProductCard = ({ product }) => {
                         }
                     }}
                     className={`absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-[var(--color-surface)] rounded-full border transition-all duration-200
-                        ${isWishlisted
+                        ₹{isWishlisted
                             ? 'border-red-300 text-red-500 shadow-[0_2px_8px_rgba(239,68,68,0.25)]'
                             : 'border-[var(--color-border)] text-gray-400 hover:border-red-300 hover:text-red-400'
                         }`}
@@ -80,7 +80,7 @@ const ProductCard = ({ product }) => {
                 {/* Quick Add overlay */}
                 <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <Link
-                        to={`/product/${product.id}`}
+                        to={`/product/₹{product.id}`}
                         className="flex items-center justify-center gap-2 w-full py-2.5 bg-[var(--color-accent)] text-white text-xs font-bold hover:bg-[var(--color-accent-hover)] transition-colors"
                     >
                         <ShoppingCart size={13} />
@@ -107,11 +107,11 @@ const ProductCard = ({ product }) => {
                 {/* Price row */}
                 <div className="flex items-center gap-2 mt-2">
                     <span className="text-base font-bold text-[var(--color-text)]">
-                        ${product.price}
+                        ₹{product.price}
                     </span>
                     {product.type !== 'Rent' && (
                         <span className="text-xs text-[var(--color-text-muted)] line-through">
-                            ${originalPrice}
+                            ₹{originalPrice}
                         </span>
                     )}
                     {product.type === 'Rent' && (

@@ -135,7 +135,7 @@ const Home = () => {
                         {CATEGORIES.map(({ label, icon: Icon, color, iconColor }) => (
                             <Link
                             key={label}
-                            to={`/market?category=${label.toLowerCase()}`}
+                            to={`/market?category=₹{label.toLowerCase()}`}
                             className="flex flex-col items-center gap-2.5 p-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] hover:-translate-y-1.5 hover:border-[var(--color-accent)]/40 transition-all duration-250 group cursor-pointer"
                             style={{ boxShadow: 'var(--shadow-card)' }}
                         >
